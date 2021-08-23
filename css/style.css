@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'DS-Digital';
+    src: url('../font/ds_digital/DS-DIGI.TTF') format('truetype');
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/background.jpg");
+    background-repeat: repeat;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+    padding: 10px 10px 10px 10px;
+}
+
+h1 {
+    z-index: 1;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'DS-Digital';
+    margin-top: 30px;
+    margin-left: -50px;
+    letter-spacing: 2px;
+    font-size: 50px;
+}
+
+
+#display {
+    display: flex;
+    width: 350px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    margin-top: -100px;
+    margin-left: -45px;
+    padding-left: 20px;
+    font-family: 'DS-Digital';
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.bckg {
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    border: 5px solid rgb(226, 9, 9);
+}
+
+
+#btnGroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 250px;
+    height: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: -50px;
+    color: rgb(255, 255, 255);
+    box-shadow: 5px 5px black;
+    font-weight: bold;
+    font-family: 'DS-Digital';
+    border: none;
+    border-radius: 15px;
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
+.horas {
+    margin-left: -20px;
+}
+
+#start {
+    background-color: rgb(61, 211, 61);
+    
+}
+
+#reset {
+    background-color: rgb(233, 40, 40);
+    
+  
+}
+#pause {
+    color: black;
+    background-color: rgb(231, 231, 48);
+    
+}
+
+
+
+@media screen and (min-width: 576px) { 
+   h1 {
+       font-size: 70px;
+       margin-left: -70px;
+   }
+    
+    #display {
+        width: 500px;
+        height: 300px;
+        margin-left: -70px;
+        font-size: 100px;
+    }
+
+    .bckg {
+        margin-top: 50px;
+    }
+ }
+
+@media screen and (min-width: 768px) { 
+    h1 {
+        font-size: 80px;
+        margin-left: -70px;
+    }
+    
+    #display {
+        width: 600px;
+        height: 350px;
+        font-size: 120px;
+    }
+ }
+
+@media screen and (min-width: 992px) { 
+    #display {
+        width: 700px;
+        height: 350px;
+        font-size: 140px;
+    }
+ }
+
+@media screen and (min-width: 1200px) { 
+    #display {
+        width: 800px;
+        height: 350px;
+        font-size: 140px;
+    }
+ }
+
+@media screen and (min-width: 1400px) { 
+    h1 {
+        font-size: 100px;
+        margin-left: -70px;
+    }
+    
+    #display {
+        width: 800px;
+        height: 350px;
+    }
+ }
