@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
 @font-face {
     font-family: 'DS-Digital';
     src: url('../font/ds_digital/DS-DIGI.TTF') format('truetype');
@@ -12,12 +14,15 @@
 body {
     width: 100%;
     height: 100%;
-    background-image: url("../img/background.jpg");
-    background-repeat: repeat;
+    background-image: url("../img/back.jpg"); 
+    
+    /* background-repeat: repeat; */
+    
 }
 
 img {
     width: 100%;
+   
 }
 
 .container {
@@ -33,11 +38,12 @@ h1 {
     z-index: 1;
     color: black;
     text-transform: uppercase;
-    font-family: 'DS-Digital';
+    font-family: 'Russo One', sans-serif;
+    /* font-family: 'DS-Digital'; */
     margin-top: 25px;
     margin-left: -50px;
     letter-spacing: 2px;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 
@@ -53,6 +59,7 @@ h1 {
     margin-top: -100px;
     margin-left: -45px;
     padding-left: 20px;
+
     font-family: 'DS-Digital';
     font-size: 60px;
     font-weight: bold;
@@ -62,9 +69,8 @@ h1 {
     background-color: black;
     padding: 10px;
     border-radius: 10px;
-    border: 5px solid rgb(226, 9, 9);
+    
 }
-
 
 #btnGroup {
     display: flex;
@@ -74,19 +80,19 @@ h1 {
 }
 
 button {
-    width: 250px;
-    height: 100px;
+    width: 150px;
+    height: 80px;
     padding: 10px;
     margin-top: 20px;
     margin-left: -50px;
     color: rgb(255, 255, 255);
-    box-shadow: 5px 5px black;
     font-weight: bold;
-    font-family: 'DS-Digital';
+    font-family: 'Russo One', sans-serif;
     border: none;
-    border-radius: 15px;
-    font-size: 80px;
+    border-radius: 10px;
+    font-size: 40px;
     text-transform: uppercase;
+    transition: all .3s;
 }
 
 .horas {
@@ -94,19 +100,82 @@ button {
 }
 
 #start {
-    background-color: rgb(61, 211, 61);
-    
+    background-color: rgba(252, 252, 252, 0.39);
 }
 
 #reset {
-    background-color: rgb(233, 40, 40);
-    
-  
+    background-color: rgba(252, 252, 252, 0.39);
 }
 #pause {
-    color: black;
-    background-color: rgb(231, 231, 48);
-    
+    background-color: rgba(252, 252, 252, 0.39);
+}
+
+
+#start:hover {
+    animation-name: start;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    box-shadow:
+    1px 1px #070707,
+    2px 2px #000508,
+    3px 3px #020303;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+}
+
+#reset:hover {
+    animation-name: reset;
+    animation-duration: 6s;
+    animation-timing-function: ease-in;
+    box-shadow:
+    1px 1px #070707,
+    2px 2px #000508,
+    3px 3px #020303;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+}
+
+#pause:hover {
+    animation-name: pause;
+    animation-duration: 6s;
+    animation-timing-function: ease-in;
+    box-shadow:
+    1px 1px #070707,
+    2px 2px #000508,
+    3px 3px #020303;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+}
+
+@keyframes start {
+    from{
+        background-color: rgb(7, 247, 27);
+        transition: all .35s;
+    }
+    to {    
+        background-color: rgb(10, 240, 106);
+        transition: all .35s;
+    }
+}
+
+@keyframes reset {
+    from{
+        background-color: rgb(236, 24, 9);
+    }
+    to {    
+        background-color: rgba(255, 17, 0, 0.863);
+    }
+}
+
+@keyframes pause {
+    from{
+        background-color: rgb(245, 211, 22);
+        color: #000;
+    }
+    to {    
+        background-color: rgb(238, 234, 13);
+        color: #000;
+    }
 }
 
 
@@ -148,6 +217,25 @@ button {
         height: 350px;
         font-size: 140px;
     }
+    #btnGroup {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #start {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: -40px;
+    }
+    
+    #reset {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: 50px;
+      
+    }
+    #pause {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: 50px;
+    }
  }
 
 @media screen and (min-width: 1200px) { 
@@ -155,6 +243,25 @@ button {
         width: 800px;
         height: 350px;
         font-size: 140px;
+    }
+    #btnGroup {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #start {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: -40px;
+    }
+    
+    #reset {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: 50px;
+      
+    }
+    #pause {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: 50px;
     }
  }
 
@@ -166,6 +273,26 @@ button {
     
     #display {
         width: 800px;
-        height: 350px;
+        height: 450px;
+        margin-top: -150px;
+    }
+    #btnGroup {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #start {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: -40px;
+    }
+    
+    #reset {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: 50px;
+      
+    }
+    #pause {
+        background-color: rgba(252, 252, 252, 0.39);
+        margin-left: 50px;
     }
  }
