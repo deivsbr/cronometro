@@ -92,8 +92,30 @@ button {
     border-radius: 10px;
     font-size: 40px;
     text-transform: uppercase;
-    transition: all .3s;
+    transition-duration: 0.4s;
+    overflow: hidden;
 }
+/* 
+button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+  
+  button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  } */
 
 .horas {
     margin-left: -20px;

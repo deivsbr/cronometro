@@ -2,9 +2,11 @@ let count = 0;
 let segundos = 0;
 let minutos = 0;
 let horas = 0;
-let tempo;
+let tempo = 0;
+
 
 function start(){
+    if(tempo == 0){
     tempo = setInterval(function() {
     count++;
     segundos = count;
@@ -17,12 +19,10 @@ function start(){
         count = 0;
         horas++;
         document.getElementById('horas').innerHTML = horas;
-    } else if(horas >= 12){
-
-    }
+    } 
 },1000);
+} 
 }
-
 
 
 function reset(){
@@ -31,6 +31,7 @@ function reset(){
     segundos = 0;
     minutos = 0;
     horas = 0;
+    tempo = 0;
 
     document.getElementById('segundos').innerHTML = "00";
     document.getElementById('minutos').innerHTML = "00";
@@ -40,4 +41,5 @@ function reset(){
 
 function pause(){
     clearInterval(tempo);
+    tempo = 0;
 }
