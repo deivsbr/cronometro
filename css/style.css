@@ -50,7 +50,7 @@ h1 {
 #display {
     display: flex;
     width: 350px;
-    height: 200px;
+    height: 300px;
     justify-content: center;
     align-items: center;
     color: white;
